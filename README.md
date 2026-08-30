@@ -6,6 +6,8 @@ Static marketing one-pager for **Huck**, the Ultimate scorekeeping app. This rep
 
 GitHub Pages (project site): **https://unieklee.github.io/huck-site/**
 
+Lee’s user Pages site already uses the custom domain `www.unieklee.com`. GitHub therefore 301s `unieklee.github.io/...` there. After Pages is enabled on this repo, the preview will also answer at **https://www.unieklee.com/huck-site/**. That is not gethuck.com. This repo has no CNAME.
+
 Do **not** point DNS or a custom domain at this repo until Lee says to. Do not add a CNAME for gethuck.com.
 
 ## What this is
@@ -37,3 +39,5 @@ Then open http://127.0.0.1:8000/huck-site/
 Preferred after merge: GitHub Actions workflow in `.github/workflows/pages.yml`.
 
 Until `main` is merged, the preview is published from the `gh-pages` branch so github.io can load without changing production DNS.
+
+Pages still needs one repo-admin click (this token cannot enable it): **Settings → Pages → Source: Deploy from a branch → `gh-pages` / `/ (root)` → Save.**
