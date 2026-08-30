@@ -20,7 +20,7 @@ Do **not** point DNS or a custom domain at this repo until Lee says to. Do not a
 
 - Not live production. Carrd still serves gethuck.com.
 - Not the iOS app. The app repo is [UniekLee/Huck](https://github.com/UniekLee/Huck) — leave it alone.
-- The support form does not POST anywhere. It is a placeholder until after publish.
+- The support form does not POST anywhere. Eventual backend is **Forminit TBD** (no account created, no endpoint invented). Placeholder until an endpoint is provided.
 
 ## Local
 
