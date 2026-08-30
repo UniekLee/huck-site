@@ -1,43 +1,34 @@
 # huck-site
 
-Static marketing one-pager for **Huck**, the Ultimate scorekeeping app. This repo is the preview for [gethuck.com](https://gethuck.com). Production stays on Carrd until Lee says otherwise.
+Static marketing one-pager for **Huck**, the Ultimate scorekeeping app. This repo is the draft for [gethuck.com](https://gethuck.com). Production stays on Carrd until Lee says otherwise.
 
 ## Preview
 
-GitHub Pages (project site): **https://unieklee.github.io/huck-site/**
+**GitHub Pages is off. Do not enable it** under UniekLee. Any UniekLee project Pages site is served at `www.unieklee.com/<repo>/` because the user Pages site already uses that custom domain. Lee does not want this preview on unieklee.com.
 
-Lee’s user Pages site already uses the custom domain `www.unieklee.com`. GitHub therefore 301s `unieklee.github.io/...` there. After Pages is enabled on this repo, the preview will also answer at **https://www.unieklee.com/huck-site/**. That is not gethuck.com. This repo has no CNAME.
+`main`/`docs` holds a noindex “Not found” stub so `https://www.unieklee.com/huck-site/` is not the Huck site. Leave that stub alone.
 
-Do **not** point DNS or a custom domain at this repo until Lee says to. Do not add a CNAME for gethuck.com.
+Preview is **this pull request** until a host that is not unieklee.com is chosen. Do not add a CNAME. Do not point DNS at this repo. Do not touch live gethuck.com.
 
 ## What this is
 
 - Static HTML/CSS (a little JS for the support form placeholder).
-- Paths are set for the `/huck-site/` project Pages base (root-relative `/huck-site/...` URLs).
+- Relative URLs (`css/`, `assets/`, `js/`, `privacy/`) so the site works from any static host, including a GitHub CDN file preview.
 - App Store CTAs: https://apps.apple.com/app/id6467775586
 
 ## What this is not
 
 - Not live production. Carrd still serves gethuck.com.
+- Not a GitHub Pages site. Do not turn Pages on.
 - Not the iOS app. The app repo is [UniekLee/Huck](https://github.com/UniekLee/Huck) — leave it alone.
-- The support form does not POST anywhere. Eventual backend is **Forminit TBD** (no account created, no endpoint invented). Placeholder until an endpoint is provided.
+- The support form does not POST anywhere. Eventual backend is **Forminit TBD** (no account created, no endpoint invented). Placeholder until an endpoint is provided. Data request: `mailto:privacy@gethuck.com`.
 
 ## Local
 
-Serve the files under a `/huck-site/` prefix so root-relative URLs resolve:
+From the repo root:
 
 ```sh
-mkdir -p /tmp/huck-preview/huck-site
-cp -a index.html .nojekyll css js assets privacy /tmp/huck-preview/huck-site/
-cd /tmp/huck-preview && python3 -m http.server 8000
+python3 -m http.server 8000
 ```
 
-Then open http://127.0.0.1:8000/huck-site/
-
-## Pages
-
-Preferred after merge: GitHub Actions workflow in `.github/workflows/pages.yml`.
-
-Until `main` is merged, the preview is published from the `gh-pages` branch so github.io can load without changing production DNS.
-
-Pages still needs one repo-admin click (this token cannot enable it): **Settings → Pages → Source: Deploy from a branch → `gh-pages` / `/ (root)` → Save.**
+Then open http://127.0.0.1:8000/
