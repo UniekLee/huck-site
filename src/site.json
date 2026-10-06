@@ -26,6 +26,6 @@
   ],
   "newsletter": {
     "provider": "emailoctopus",
-    "listId": ""
+    "listId": "fede11b4-a0e9-11ee-b7c4-efeaa9adc2b7"
   }
 }
