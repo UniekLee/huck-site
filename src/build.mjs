@@ -1,6 +1,6 @@
 // Static site generator: node src/build.mjs  ->  public/
 // Content lives in site.json, features.json and variants.json; add a variant by adding an entry to variants.json.
-import { readFileSync, writeFileSync, mkdirSync, cpSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, cpSync, rmSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -22,8 +22,12 @@ function storeUrl(v) {
   return `${site.appStoreUrl}?${p}`;
 }
 
+// Apple's official badge: drop the downloaded SVG at src/assets/app-store-badge.svg and it is used for the big buttons.
+const hasBadge = existsSync(join(here, 'assets', 'app-store-badge.svg'));
 const cta = (v, placement, label = 'Download on the App Store', cls = '') =>
-  `<a class="btn ${cls}" href="${esc(storeUrl(v))}" data-placement="${placement}"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.600-2.800-1.800-3.400-1.800-1.400-.1-2.800.8-3.500.8-.7 0-1.800-.8-3-.8-1.500 0-3 .9-3.800 2.300-1.600 2.800-.4 7 1.200 9.300.8 1.100 1.700 2.400 2.900 2.300 1.200 0 1.600-.7 3-.7s1.800.7 3 .7c1.300 0 2.100-1.100 2.800-2.200.9-1.300 1.300-2.500 1.300-2.600-.1 0-2.500-1-2.500-3.800zM14.200 5.800c.6-.8 1.100-1.900.9-3-.9 0-2.100.6-2.700 1.400-.6.700-1.100 1.800-1 2.900 1.100.1 2.200-.5 2.800-1.300z"/></svg><span>${label}</span></a>`;
+  hasBadge && !cls
+    ? `<a class="badge" href="${esc(storeUrl(v))}" data-placement="${placement}"><img src="/assets/app-store-badge.svg" alt="Download on the App Store" height="54"></a>`
+    : `<a class="btn ${cls}" href="${esc(storeUrl(v))}" data-placement="${placement}"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.600-2.800-1.800-3.400-1.800-1.400-.1-2.800.8-3.500.8-.7 0-1.800-.8-3-.8-1.500 0-3 .9-3.800 2.300-1.600 2.800-.4 7 1.200 9.300.8 1.100 1.700 2.400 2.900 2.300 1.200 0 1.600-.7 3-.7s1.800.7 3 .7c1.300 0 2.100-1.100 2.800-2.200.9-1.300 1.300-2.500 1.300-2.600-.1 0-2.500-1-2.500-3.800zM14.200 5.800c.6-.8 1.100-1.900.9-3-.9 0-2.100.6-2.700 1.400-.6.700-1.100 1.800-1 2.900 1.100.1 2.200-.5 2.800-1.300z"/></svg><span>${label}</span></a>`;
 
 function device(m) {
   const ext = m.img.startsWith('phone') ? 640 : 416;

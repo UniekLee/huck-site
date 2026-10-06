@@ -28,4 +28,7 @@ Append an entry to `src/variants.json` (copy an existing one), choose a `slug`, 
 - Lead with "Keep score. Track the rest." Say "game", not "full/complete/whole game".
 - Never hard-code prices; the App Store shows local prices.
 - Real app screens only, no invented metrics. Workout recording is optional (Apple Watch plus Health permission).
-- Launch together with app 26.38. The pricing section describes the 3-free-games and credits model, which is not true of public 26.02.
+- The pricing section describes the 3-free-games and credits model (app 26.38, live).
+
+## App Store badge
+Download Apple's official "Download on the App Store" SVG (black, English) from https://toolbox.marketingtools.apple.com/ and save it as `src/assets/app-store-badge.svg`, then rebuild. Until then the big buttons use a styled link.

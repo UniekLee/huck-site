@@ -111,3 +111,4 @@ h1{font-size:clamp(2.4rem,6.2vw,4.4rem)}
  .device.phone{width:min(230px,58%)}.device.watch{width:min(150px,38%)}
  .hero{padding-top:36px}
 }
+.badge{display:inline-block;line-height:0;transition:transform .15s}.badge:hover{transform:translateY(-2px)}
