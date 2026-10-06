@@ -42,4 +42,4 @@ Preview deploys: pushes to the PR branch build on Cloudflare automatically.
 <!-- deploy trigger 14:29 -->
 
 ## Email signup
-`src/site.json` → `newsletter.listId` (EmailOctopus list ID, the UUID in the list's embedded-form code). While empty, the signup section is hidden. When set, every page gets a no-JavaScript signup form that posts to EmailOctopus.
+`src/site.json` → `newsletter.formId` (the form ID in EmailOctopus's embed code, `…/form/<formId>.js`). While empty, the signup section is hidden. When set, the variant pages load EmailOctopus's embedded form.
