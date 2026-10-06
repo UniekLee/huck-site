@@ -159,7 +159,7 @@ ${v.features.map(featureSection).join('\n')}
 <section class="final"><div class="wrap">
   <h2>${esc(v.finalTitle)}</h2><p class="lead">${esc(v.finalSub)}</p>${cta(v, 'footer')}
 </div></section>
-</main>
+${signup()}</main>
 ${footer()}`;
   return layout(v, body, { canonical: path(v.slug), ld });
 }
@@ -182,6 +182,22 @@ function privacyHtml() {
 }
 const base = variants[0];
 const simple = (title, inner, canonical, desc) => layout(base, `${header(base)}<main class="doc"><div class="wrap narrow"><h1>${esc(title)}</h1>${inner}</div></main>${footer()}`, { title: `${title} – Huck`, description: desc, canonical });
+
+// Email signup. Plain HTML form, no JavaScript. Hidden until site.json newsletter.listId is set (EmailOctopus list ID).
+function signup() {
+  const id = site.newsletter?.listId;
+  if (!id) return '';
+  return `<section class="signup" id="updates"><div class="wrap narrow">
+  <p class="kicker">Huckdates</p><h2>Get occasional Huck updates.</h2>
+  <form action="https://emailoctopus.com/lists/${esc(id)}/members/embedded/1.3/add" method="post" class="signup-form">
+    <label class="sr" for="email">Email address</label>
+    <input id="email" type="email" name="email_address" placeholder="you@example.com" required autocomplete="email">
+    <input type="text" name="hpc${esc(id)}" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp" value="">
+    <button class="btn" type="submit">Subscribe</button>
+  </form>
+  <p class="fine">Occasional updates, only if you sign up. Unsubscribe any time. See the <a href="/privacy/">privacy notice</a> for how your details are handled.</p>
+</div></section>`;
+}
 
 const pages = new Map();
 for (const v of variants) pages.set(path(v.slug), page(v));

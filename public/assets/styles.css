@@ -112,3 +112,10 @@ h1{font-size:clamp(2.4rem,6.2vw,4.4rem)}
  .hero{padding-top:36px}
 }
 .badge{display:inline-block;line-height:0;transition:transform .15s}.badge:hover{transform:translateY(-2px)}
+.signup{padding:64px 0;border-top:1px solid var(--line)}
+.signup-form{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.signup-form input[type=email]{flex:1 1 240px;background:var(--ink2);border:1px solid #3a3a3a;border-radius:999px;padding:14px 20px;color:var(--text);font:inherit}
+.signup-form input[type=email]:focus{outline:3px solid var(--lime);border-color:var(--lime)}
+.signup-form button{border:0;cursor:pointer;font:inherit;font-weight:700}
+.hp,.sr{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.signup .fine{color:var(--mut)}
