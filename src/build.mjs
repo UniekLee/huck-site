@@ -79,6 +79,7 @@ ${noindex ? '<meta name="robots" content="noindex">' : ''}
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/favicon.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/styles.css">
+${canonical === '/' ? `<script>/* old Carrd anchors (used by the App Store listing and Watch app) */var m={'#privacy-policy':'/privacy/','#support':'/support/','#privacy':'/privacy/'}[location.hash];if(m)location.replace(m)</script>` : ''}
 ${ld}
 </head>
 <body>
