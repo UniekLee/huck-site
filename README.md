@@ -36,3 +36,5 @@ Append an entry to `src/variants.json` (copy an existing one), choose a `slug`, 
 
 ## App Store badge
 Download Apple's official "Download on the App Store" SVG (black, English) from https://toolbox.marketingtools.apple.com/ and save it as `src/assets/app-store-badge.svg`, then rebuild. Until then the big buttons use a styled link.
+
+Preview deploys: pushes to the PR branch build on Cloudflare automatically.
