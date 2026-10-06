@@ -178,7 +178,7 @@ function privacyHtml() {
     if (!line.trim()) continue;
     h += m ? `<h2>${esc(m[1])}</h2>` : `<p>${mdInline(line)}</p>`;
   }
-  return '<p class="muted">Last updated: 5 October 2026</p>' + h + (list ? '</ul>' : '');
+  return '<p class="muted">Last updated: 6 October 2026</p>' + h + (list ? '</ul>' : '');
 }
 const base = variants[0];
 const simple = (title, inner, canonical, desc) => layout(base, `${header(base)}<main class="doc"><div class="wrap narrow"><h1>${esc(title)}</h1>${inner}</div></main>${footer()}`, { title: `${title} – Huck`, description: desc, canonical });
