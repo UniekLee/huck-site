@@ -14,7 +14,7 @@ You can change Health permissions in Apple's settings, turn workout recording of
 • Mixpanel and PostHog: product analytics using pseudonymous identifiers and documented app events. Version 26.38 disables automatic session replay, screen capture, surveys and error capture in its PostHog configuration.
 • OneSignal: iPhone push delivery and, where you opt in, Huck updates. Version 26.38 does not send Health values, workout preferences, purchase status or credit balances as marketing tags.
 • EmailOctopus: the email newsletter you choose to subscribe to.
-• Carrd and Google Workspace: the website, submitted forms and support correspondence.
+• Google Workspace: support correspondence.
 • Cloudflare: hosting for gethuck.com and website visit statistics (such as page views, referring site and country) that do not use cookies.
 These providers process information for their respective services. Their processing can take place outside your country, including outside the UK or EEA. Contact us for information about applicable processing arrangements and safeguards. We do not sell your personal information.
 **Messages and your choices**
