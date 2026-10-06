@@ -1,0 +1,44 @@
+{
+  "score": {
+    "kicker": "Keep the score close",
+    "title": "Score from your wrist.",
+    "body": "Add a point with a tap on Apple Watch or iPhone and keep your head in the game. Your team names and colours stay with the result.",
+    "bullets": ["Big, glanceable scoreboard", "Wrist or phone, your choice", "Works on iPhone and iPad too"],
+    "media": [{ "img": "watch-score", "type": "watch", "alt": "Huck scoreboard on Apple Watch" }]
+  },
+  "mixed": {
+    "kicker": "Mixed sets",
+    "title": "Always know the next set.",
+    "body": "Pick ABBA or OWWO/WOOW and Huck advances the active set as the score changes. No more arguing about who is on next.",
+    "bullets": ["ABBA or OWWO/WOOW rotations", "Advances after every point", "Visible on the scoreboard"],
+    "media": [{ "img": "phone-mixed-sets", "type": "phone", "alt": "Huck scoreboard with the active mixed set highlighted" }]
+  },
+  "stats": {
+    "kicker": "Personal stats",
+    "title": "Your goals. Your assists.",
+    "body": "Tap Goal, Assist or Skip right after a point, from your wrist. Look back at your contribution once the game is done.",
+    "bullets": ["Goals, assists and defences", "Quick, one-tap buttons on Apple Watch", "Personal stats saved with each game"],
+    "media": [{ "img": "watch-goal-assist", "type": "watch", "alt": "Goal and Assist buttons on Apple Watch" }]
+  },
+  "workout": {
+    "kicker": "Apple Watch workout",
+    "title": "Record the effort, too.",
+    "body": "Huck records a workout on Apple Watch while you keep score, then shows duration, distance, active energy and heart rate alongside the game when available.",
+    "bullets": ["Duration, distance, active energy, heart rate", "Optional: needs Apple Watch and Health permission", "Huck works without it if you'd rather skip"],
+    "media": [{ "img": "watch-workout", "type": "watch", "alt": "Huck workout screen on Apple Watch" }]
+  },
+  "teams": {
+    "kicker": "Teams",
+    "title": "Your teams, ready to play.",
+    "body": "Set team names, colours and your set rotation before the first pull. They follow the game into your summary and history.",
+    "bullets": ["Names and colours that stick", "Set rotation chosen up front", "Past games a tap away"],
+    "media": [{ "img": "phone-team-setup", "type": "phone", "alt": "Huck game setup with teams and set tracking" }]
+  },
+  "results": {
+    "kicker": "After the game",
+    "title": "Save the result. Share the win.",
+    "body": "Every game ends with a summary you can look back on, and a result card to share with the team.",
+    "bullets": ["Final score and game history", "Shareable square post or banner", "History stays available, always"],
+    "media": [{ "img": "phone-summary", "type": "phone", "alt": "Huck game summary with final score and share options" }]
+  }
+}

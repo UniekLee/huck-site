@@ -1,0 +1,15 @@
+{
+  "name": "Huck",
+  "baseUrl": "https://gethuck.com",
+  "appStoreUrl": "https://apps.apple.com/us/app/huck/id6467775586",
+  "providerToken": "",
+  "supportEmail": "privacy@gethuck.com",
+  "privacyEmail": "privacy@gethuck.com",
+  "termsUrl": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+  "social": [
+    { "label": "Instagram", "url": "https://instagram.com/huckapp" },
+    { "label": "Threads", "url": "https://threads.net/huckapp" },
+    { "label": "TikTok", "url": "https://www.tiktok.com/@huckapp" },
+    { "label": "X", "url": "https://x.com/huck_app" }
+  ]
+}
