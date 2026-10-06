@@ -10,6 +10,10 @@ node src/build.mjs   # no dependencies; writes public/
 
 `public/` is committed build output. The old `docs/` 404 stub is untouched, so nothing is published at unieklee.com/huck-site by this change. Point your host (or Pages) at `public/` when ready to launch.
 
+## Hosting (Cloudflare)
+
+`wrangler.jsonc` serves `public/`. In Cloudflare (Workers & Pages → Create → Import a repository) use: root directory `/`, build command `node src/build.mjs`, deploy command `npx wrangler deploy`. Pull requests and branches can use the non-production branch command `npx wrangler versions upload` for preview URLs.
+
 ## How it works
 
 | File | Purpose |
