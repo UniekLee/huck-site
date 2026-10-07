@@ -178,24 +178,35 @@ function privacyHtml() {
     if (!line.trim()) continue;
     h += m ? `<h2>${esc(m[1])}</h2>` : `<p>${mdInline(line)}</p>`;
   }
-  return '<p class="muted">Last updated: 5 October 2026</p>' + h + (list ? '</ul>' : '');
+  return '<p class="muted">Last updated: 6 October 2026</p>' + h + (list ? '</ul>' : '');
 }
 const base = variants[0];
 const simple = (title, inner, canonical, desc) => layout(base, `${header(base)}<main class="doc"><div class="wrap narrow"><h1>${esc(title)}</h1>${inner}</div></main>${footer()}`, { title: `${title} – Huck`, description: desc, canonical });
 
-// Email signup. Plain HTML form, no JavaScript. Hidden until site.json newsletter.listId is set (EmailOctopus list ID).
+// Email signup: our own styled form posting to the EmailOctopus form endpoint (same request their embed makes,
+// including their invisible reCAPTCHA). Hidden until newsletter.formId is set.
 function signup() {
-  const id = site.newsletter?.listId;
+  const id = site.newsletter?.formId;
   if (!id) return '';
+  const hp = site.newsletter.honeypot || '';
+  const key = site.newsletter.recaptchaKey || '';
+  const cfg = JSON.stringify({ action: `https://eocampaign1.com/form/${id}`, hp, key }).replace(/</g, '\\u003c');
   return `<section class="signup" id="updates"><div class="wrap narrow">
   <p class="kicker">Huckdates</p><h2>Get occasional Huck updates.</h2>
-  <form action="https://emailoctopus.com/lists/${esc(id)}/members/embedded/1.3/add" method="post" class="signup-form">
-    <label class="sr" for="email">Email address</label>
-    <input id="email" type="email" name="email_address" placeholder="you@example.com" required autocomplete="email">
-    <input type="text" name="hpc${esc(id)}" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp" value="">
+  <form class="signup-form" id="signup-form" novalidate>
+    <label class="sr" for="signup-email">Email address</label>
+    <input id="signup-email" name="field_0" type="email" inputmode="email" autocomplete="email" placeholder="Email address" required>
+    <div class="hp" aria-hidden="true"><input type="text" tabindex="-1" autocomplete="off" name="${esc(hp)}"></div>
     <button class="btn" type="submit">Subscribe</button>
+    <p class="signup-msg" id="signup-msg" role="status" aria-live="polite"></p>
   </form>
-  <p class="fine">Occasional updates, only if you sign up. Unsubscribe any time. See the <a href="/privacy/">privacy notice</a> for how your details are handled.</p>
+  <p class="fine">Occasional updates, only if you sign up. Unsubscribe any time. This form is protected by reCAPTCHA, and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply. See our <a href="/privacy/">privacy notice</a> for how your details are handled.</p>
+  <script>(function(){var C=${cfg},f=document.getElementById('signup-form'),m=document.getElementById('signup-msg'),e=document.getElementById('signup-email'),b=f.querySelector('button'),w=null,loading=false;
+  function say(t,ok){m.textContent=t;m.className='signup-msg '+(ok?'ok':'err')}
+  function load(){if(loading||!C.key)return;loading=true;window.__eoReady=function(){var d=document.createElement('div');f.appendChild(d);w=grecaptcha.render(d,{sitekey:C.key,size:'invisible',isolated:true,callback:send})};var s=document.createElement('script');s.src='https://www.google.com/recaptcha/api.js?onload=__eoReady&render=explicit';s.async=true;document.body.appendChild(s)}
+  function send(token){var d=new FormData();d.set('field_0',e.value.trim());d.set(C.hp,f.querySelector('.hp input').value);if(token)d.set('recaptcha-response',token);
+  fetch(C.action,{method:'POST',mode:'cors',cache:'no-cache',body:d}).then(function(r){return r.json()}).then(function(r){if(r.success){f.reset();say('Thanks! Check your inbox to confirm your subscription.',true);b.disabled=true}else{say(r.error&&r.error.code==='INVALID_PARAMETERS'?'That email address looks incorrect, please try again.':'Sorry, something went wrong. Please try again later.');b.disabled=false;if(w!==null)grecaptcha.reset(w)}}).catch(function(){say('Sorry, something went wrong. Please try again later.');b.disabled=false})}
+  e.addEventListener('focus',load);f.addEventListener('submit',function(ev){ev.preventDefault();if(!/\\S+@\\S+\\.\\S+/.test(e.value.trim())){say('Please enter a valid email address.');e.focus();return}say('');b.disabled=true;if(w!==null){grecaptcha.execute(w)}else{send('')}})})();</script>
 </div></section>`;
 }
 

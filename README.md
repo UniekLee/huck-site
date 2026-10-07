@@ -42,4 +42,4 @@ Preview deploys: pushes to the PR branch build on Cloudflare automatically.
 <!-- deploy trigger 14:29 -->
 
 ## Email signup
-`src/site.json` → `newsletter.listId` (EmailOctopus list ID, the UUID in the list's embedded-form code). While empty, the signup section is hidden. When set, every page gets a no-JavaScript signup form that posts to EmailOctopus.
+`src/site.json` → `newsletter` (`formId`, `honeypot` and `recaptchaKey` all come from the EmailOctopus form: the ID in `…/form/<formId>.js`, the hidden `hp…` input name and the reCAPTCHA site key). While `formId` is empty, the signup section is hidden. When set, pages show our own styled form that posts to EmailOctopus, so no EmailOctopus styling or script is loaded except Google reCAPTCHA.
