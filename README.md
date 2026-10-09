@@ -26,7 +26,7 @@ node src/build.mjs   # no dependencies; writes public/
 
 ### Add a landing page
 
-Append an entry to `src/variants.json` (copy an existing one), choose a `slug`, a unique `campaign` token, a hero, and the order of `features`. Run the build. It appears at `/<slug>/`, gets its own sitemap entry, and shows up in the "What do you want from your scoreboard?" chips on the home page.
+Append an entry to `src/variants.json` (copy an existing one), choose a `slug`, a unique `campaign` token, an optional `ppid` (App Store custom product page ID), a hero, and the order of `features`. Run the build. It appears at `/<slug>/`, gets its own sitemap entry, and shows up in the "What do you want from your scoreboard?" chips on the home page.
 
 ## Rules the copy follows
 - Lead with "Keep score. Track the rest." Say "game", not "full/complete/whole game".

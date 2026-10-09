@@ -2,6 +2,7 @@
   {
     "slug": "",
     "campaign": "hucksite_wholegame_v1",
+    "ppid": "1fa1c329-ab3e-4f2f-be54-d44ce8e3607f",
     "title": "Huck – Ultimate Scoreboard for iPhone & Apple Watch",
     "description": "Keep score and track the rest: workout, mixed sets, goals, assists and teams. Huck is built for Ultimate on iPhone and Apple Watch. Try 3 games free.",
     "nav": "Home",
@@ -23,6 +24,7 @@
   {
     "slug": "set-tracking",
     "campaign": "hucksite_settracking_v1",
+    "ppid": "52aca733-4765-499a-86ec-fcd3b8799ca3",
     "title": "Huck – ABBA & OWWO/WOOW Mixed Set Tracker for Ultimate",
     "description": "Never lose the next mixed set. Huck tracks ABBA and OWWO/WOOW rotations automatically as the score changes, on iPhone and Apple Watch. Try 3 games free.",
     "nav": "Set tracking",
@@ -48,6 +50,7 @@
   {
     "slug": "workout-tracking",
     "campaign": "hucksite_workout_v1",
+    "ppid": "47c407fa-8b3d-4da6-914d-78b9ea896f0f",
     "title": "Huck – Ultimate Frisbee Workout & Score Tracker for Apple Watch",
     "description": "Keep score on your wrist while Huck records your Ultimate workout: duration, distance, active energy and heart rate. Built for Apple Watch. Try 3 games free.",
     "nav": "Workout tracking",
@@ -73,6 +76,7 @@
   {
     "slug": "goals-assists",
     "campaign": "hucksite_stats_v1",
+    "ppid": "925f3ce4-de4b-40af-80ed-e3b83e7e1411",
     "title": "Huck – Track Your Ultimate Goals, Assists & Personal Stats",
     "description": "Log goals, assists and defences from your wrist and review your personal Ultimate stats after every game. Huck for iPhone and Apple Watch. Try 3 games free.",
     "nav": "Goals & assists",
