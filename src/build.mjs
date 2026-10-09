@@ -19,6 +19,7 @@ function storeUrl(v) {
   if (site.providerToken) p.set('pt', site.providerToken);
   p.set('ct', v.campaign);
   p.set('mt', '8');
+  if (v.ppid) p.set('ppid', v.ppid); // approved App Store custom product page for this variant
   return `${site.appStoreUrl}?${p}`;
 }
 
