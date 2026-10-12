@@ -16,7 +16,7 @@
         { "img": "watch-goal-assist", "type": "watch", "alt": "Goal and Assist buttons on Apple Watch" }
       ]
     },
-    "features": ["score", "mixed", "stats", "workout", "teams", "results"],
+    "features": ["score", "watchhome", "mixed", "stats", "workout", "teams", "results"],
     "faq": [],
     "finalTitle": "Next game, keep more than the score.",
     "finalSub": "Your first 3 games are free, with every feature included."
@@ -115,7 +115,7 @@
         { "img": "phone-summary", "type": "phone", "alt": "Huck game summary on iPhone" }
       ]
     },
-    "features": ["score", "mixed", "stats", "workout", "teams", "results"],
+    "features": ["score", "watchhome", "mixed", "stats", "workout", "teams", "results"],
     "faq": [
       { "q": "Can I keep Ultimate score on my Apple Watch?", "a": "Yes. Add a point to either team with a tap on Apple Watch. The score also appears on iPhone." },
       { "q": "Do I need my phone with me to score a game?", "a": "No. Huck keeps score on Apple Watch on its own, and your Watch and iPhone stay in sync without needing an internet connection." },
