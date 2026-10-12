@@ -62,5 +62,12 @@
     "body": "Every game ends with a summary you can look back on, and a result card to share with the team.",
     "bullets": ["Final score and game history", "Shareable square post or banner", "History stays available, always"],
     "media": [{ "img": "phone-summary", "type": "phone", "alt": "Huck game summary with final score and share options" }]
+  },
+  "editteams": {
+    "kicker": "Edit after the game",
+    "title": "Fix it after the whistle.",
+    "body": "Typed a team name wrong, or picked the wrong colours? Edit both on a finished game. The score and timeline stay as recorded, and the images you share use the new names.",
+    "bullets": ["Change names and colours any time", "Score and timeline stay as recorded", "Share images use the new names"],
+    "media": [{ "img": "phone-edit-teams", "type": "phone", "alt": "Edit teams sheet on a finished game in Huck" }]
   }
 }
