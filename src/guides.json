@@ -1,0 +1,165 @@
+[
+  {
+    "slug": "abba-mixed-ultimate",
+    "campaign": "hucksite_guide_abba_v1",
+    "title": "ABBA in Mixed Ultimate: The Gender Ratio Sequence Explained",
+    "description": "How the ABBA ratio rule works in mixed ultimate frisbee, with the point-by-point sequence and an easy way to keep track of it on the sideline.",
+    "h1": "ABBA in mixed ultimate, explained",
+    "intro": "If you play mixed ultimate, you have heard someone shout \"whose ratio is it?\" between points. ABBA is the most common answer: a fixed pattern that decides which gender category has four players on the field, so nobody has to argue about it.",
+    "sections": [
+      {
+        "h": "What ABBA means",
+        "p": [
+          "ABBA is the prescribed-ratio rule used by WFDF, Ultimate Canada and USA Ultimate mixed events, often called Ratio Rule A. Before the game you do the usual disc toss for who starts on offence, then a second toss decides which gender category starts with four players. Call that category A and the other one B.",
+          "From there the sequence is fixed. It does not matter who scored or who is pulling: the ratio for every point is already decided."
+        ]
+      },
+      {
+        "h": "The sequence, point by point",
+        "list": [
+          "Point 1: four players of Gender A",
+          "Point 2: four players of Gender B",
+          "Point 3: four players of Gender B",
+          "Point 4: four players of Gender A",
+          "Point 5: four players of Gender A",
+          "Point 6: four players of Gender B",
+          "Point 7: four players of Gender B, and so on"
+        ],
+        "p": [
+          "Notice the shape: A, then BB, then AA, then BB, and so on. After the first point it always comes in pairs, which keeps the number of points with each ratio level across the game."
+        ]
+      },
+      {
+        "h": "Why teams like it",
+        "p": [
+          "Both gender categories get the same number of points as the majority, regardless of the score. Neither team can pick the ratio that suits its roster, and the rule is easy to check: look at the scoreboard, count the points played, and you know the answer."
+        ]
+      },
+      {
+        "h": "The sideline problem",
+        "p": [
+          "The pattern is simple, but it is easy to lose track in a long game or after a time-out. A wrong ratio gets noticed mid-point and causes arguments. The fix is to track it where you already track the score."
+        ]
+      },
+      {
+        "h": "Keeping track with Huck",
+        "p": [
+          "Huck is an Ultimate scoreboard for iPhone and Apple Watch. Pick ABBA (or OWWO/WOOW) in game setup and Huck advances the active set automatically as the score changes, so the next set is always on the scoreboard, on your phone or your wrist."
+        ]
+      },
+      {
+        "h": "Check your league",
+        "p": [
+          "Not every league uses Ratio Rule A. Some social leagues let captains agree a different rule, such as the end zone or the offence choosing the ratio. Confirm the rule for your event before the first pull."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "Does ABBA depend on who scored the last point?", "a": "No. In Ratio Rule A the sequence is prescribed in advance and does not depend on who scored." },
+      { "q": "Who decides which gender is A?", "a": "A second toss at the start of the game decides which gender category starts with four players. That category is A." },
+      { "q": "Can Huck track ABBA?", "a": "Yes. Choose ABBA or OWWO/WOOW in game setup and Huck advances the active set as the score changes." }
+    ],
+    "source": "Sequence as published by Hills Ultimate League, https://www.hillsultimate.com.au/mixed-division-gender-rules"
+  },
+  {
+    "slug": "keep-score-ultimate-frisbee",
+    "campaign": "hucksite_guide_score_v1",
+    "title": "How to Keep Score in Ultimate Frisbee (Without Losing Count)",
+    "description": "How scoring works in ultimate frisbee, what to write down during a game, and easy ways to keep score from the sideline or your wrist.",
+    "h1": "How to keep score in ultimate frisbee",
+    "intro": "Scoring in ultimate is simple. Keeping score for a whole game while you are also playing is the hard part. Here is how scoring works and how to keep track of it without losing count.",
+    "sections": [
+      {
+        "h": "How a point is scored",
+        "p": [
+          "A team scores one point when a player catches the disc in the end zone they are attacking. After every point the teams swap ends, and the team that just scored pulls (throws the disc) to start the next point."
+        ]
+      },
+      {
+        "h": "How long a game lasts",
+        "p": [
+          "Formats vary by league and event. Many games are played to a target number of points, commonly 15, with a half-time part-way through, often alongside a time cap. Check the format for your event before you start."
+        ]
+      },
+      {
+        "h": "What to keep track of",
+        "list": [
+          "Both teams' scores",
+          "Who is pulling next (the team that just scored)",
+          "Which half you are in, and whether a time cap applies",
+          "In mixed ultimate, the gender ratio for the next point",
+          "Optionally, who scored and assisted each point"
+        ]
+      },
+      {
+        "h": "Ways to do it",
+        "p": [
+          "Pen and paper works until it rains. A shared notes app works until someone is not looking at it. The easiest approach is one person with a scoreboard that everyone can see and that is fast to update with one tap.",
+          "Huck puts the scoreboard on your Apple Watch and iPhone: add a point with one tap, see the score at a glance and follow mixed sets as the game goes."
+        ]
+      },
+      {
+        "h": "Keep more than the score",
+        "p": [
+          "If you want to look back afterwards, record goals, assists and defences as you go, and record your workout on Apple Watch. Huck keeps all of it with the game so you can review it later."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "Who pulls after a point?", "a": "The team that just scored pulls to start the next point." },
+      { "q": "Do teams change ends after every point?", "a": "Yes, teams swap the end zones they attack after each point." },
+      { "q": "What score does a game go to?", "a": "It depends on the league. Many games go to 15 points, often with a time cap. Check your event's rules." }
+    ]
+  },
+  {
+    "slug": "ultimate-kit-bag-checklist",
+    "campaign": "hucksite_guide_kitbag_v1",
+    "title": "Ultimate Frisbee Kit Bag Checklist: What to Pack for Game Day",
+    "description": "A practical kit bag checklist for ultimate frisbee: footwear, layers, water, spare discs and the small things you forget until you need them.",
+    "h1": "The ultimate frisbee kit bag checklist",
+    "intro": "Most games are lost to small things: no spare shirt, no water, studs left at home. Use this checklist to pack once and stop thinking about it.",
+    "sections": [
+      {
+        "h": "On the field",
+        "list": [
+          "Cleats suited to the surface (grass, turf or indoor)",
+          "Shorts or leggings and a spare pair of socks",
+          "Light and dark shirts, in case teams clash",
+          "A disc, and ideally a spare",
+          "Sun hat or cap, plus sunglasses",
+          "Cones or markers if your pitch is not set up for you"
+        ]
+      },
+      {
+        "h": "Staying comfortable",
+        "list": [
+          "Water, more than you think you need",
+          "A snack for between games at a tournament",
+          "A warm layer and a rain jacket for the sideline",
+          "A towel and a change of clothes",
+          "Sunscreen"
+        ]
+      },
+      {
+        "h": "For tournament days",
+        "list": [
+          "Registration details and the schedule",
+          "Tape, plasters and any support you use",
+          "A folding chair or mat",
+          "A phone charger or battery pack",
+          "Cash or a card for food and the post-game drink"
+        ]
+      },
+      {
+        "h": "Before you leave",
+        "p": [
+          "Charge your Apple Watch and phone. If you keep score or record workouts with Huck, a full battery means the game and your effort are saved properly."
+        ]
+      }
+    ],
+    "faq": [
+      { "q": "What shoes do I need for ultimate?", "a": "Cleats suited to the surface you play on. Grass and turf need studs, indoor courts need court shoes." },
+      { "q": "How much water should I bring?", "a": "More than you think. For tournament days, bring enough for several games plus the time between them." }
+    ]
+  }
+]

@@ -10,6 +10,7 @@ const read = (f) => readFileSync(join(here, f), 'utf8');
 const site = JSON.parse(read('site.json'));
 const features = JSON.parse(read('features.json'));
 const variants = JSON.parse(read('variants.json'));
+const guides = JSON.parse(read('guides.json'));
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const path = (slug) => (slug ? `/${slug}/` : '/');
@@ -100,7 +101,7 @@ function footer() {
   return `<footer class="foot"><div class="wrap foot-in">
   <div><a class="brand" href="/"><img src="/assets/icon.png" alt="" width="28" height="28"><span>Huck</span></a>
   <p class="muted">Ultimate scoring for iPhone and Apple Watch.<br>Huck is provided by Uniek Ltd.</p></div>
-  <nav aria-label="Footer"><a href="/privacy/">Privacy notice</a><a href="${esc(site.termsUrl)}">Terms of use</a><a href="/support/">Support</a></nav>
+  <nav aria-label="Footer"><a href="/guides/">Guides</a><a href="/privacy/">Privacy notice</a><a href="${esc(site.termsUrl)}">Terms of use</a><a href="/support/">Support</a></nav>
   <nav aria-label="Social">${site.social.map((s) => `<a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a>`).join('')}</nav>
 </div></footer>`;
 }
@@ -211,8 +212,38 @@ function signup() {
 </div></section>`;
 }
 
+
+// ---- guides (SEO articles): one entry in guides.json per page ----
+function guideLd(g) {
+  const url = site.baseUrl + `/guides/${g.slug}/`;
+  const art = { '@context': 'https://schema.org', '@type': 'Article', headline: g.h1, description: g.description, mainEntityOfPage: url, author: { '@type': 'Organization', name: 'Huck' }, publisher: { '@type': 'Organization', name: 'Uniek Ltd' } };
+  const faq = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: g.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+  return `<script type="application/ld+json">${JSON.stringify(art)}</script>\n<script type="application/ld+json">${JSON.stringify(faq)}</script>`;
+}
+function guidePage(g) {
+  const gv = { ...base, campaign: g.campaign, ppid: '' };
+  const related = guides.filter((x) => x.slug !== g.slug);
+  const body = `${header(gv)}<main class="doc"><article class="wrap narrow">
+<p class="kicker"><a href="/guides/">Guides</a></p>
+<h1>${esc(g.h1)}</h1>
+<p class="lead">${esc(g.intro)}</p>
+${g.sections.map((s) => `<h2>${esc(s.h)}</h2>${(s.p || []).slice(0, 1).map((t) => `<p>${esc(t)}</p>`).join('')}${s.list ? `<ul class="ticks">${s.list.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>` : ''}${(s.p || []).slice(1).map((t) => `<p>${esc(t)}</p>`).join('')}`).join('\n')}
+<h2>Questions</h2>
+${g.faq.map((f) => `<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('\n')}
+<div class="final"><h2>Keep score. Track the rest.</h2><p class="lead">Huck is the Ultimate scoreboard for iPhone and Apple Watch. Your first 3 games are free, with every feature included.</p>${cta(gv, 'guide')}</div>
+<h2>More guides</h2><ul>${related.map((r) => `<li><a href="/guides/${r.slug}/">${esc(r.h1)}</a></li>`).join('')}</ul>
+${g.source ? `<p class="fine">Source for the sequence: ${esc(g.source)}</p>` : ''}
+</article></main>${footer()}`;
+  return layout(gv, body, { title: g.title, description: g.description, canonical: `/guides/${g.slug}/`, ld: guideLd(g) });
+}
+function guideIndex() {
+  return layout(base, `${header(base)}<main class="doc"><div class="wrap narrow"><h1>Ultimate guides</h1><p class="lead">Short, practical guides for ultimate players and captains.</p><ul>${guides.map((g) => `<li><a href="/guides/${g.slug}/">${esc(g.h1)}</a><br><span class="muted">${esc(g.description)}</span></li>`).join('')}</ul></div></main>${footer()}`, { title: 'Ultimate guides – Huck', description: 'Practical guides for ultimate frisbee players and captains: mixed ratios, scorekeeping and kit.', canonical: '/guides/' });
+}
+
 const pages = new Map();
 for (const v of variants) pages.set(path(v.slug), page(v));
+pages.set('/guides/', guideIndex());
+for (const g of guides) pages.set(`/guides/${g.slug}/`, guidePage(g));
 pages.set('/privacy/', simple('Privacy notice', privacyHtml(), '/privacy/', 'How the Huck app and gethuck.com handle information.'));
 pages.set('/support/', simple('Support', `<p>Running into trouble with Huck? Email <a href="mailto:${site.supportEmail}">${site.supportEmail}</a> and tell us your iPhone and Apple Watch models and your Huck version.</p><h2>Request your data</h2><p>To request access, correction or deletion of your information, email <a href="mailto:${site.privacyEmail}">${site.privacyEmail}</a>. See the <a href="/privacy/">privacy notice</a>.</p><h2>Subscriptions and credits</h2><p>Manage or cancel a Huck Pro subscription in your App Store account settings. Game credits never expire and your saved history stays available.</p><h2>Please don't send Health information</h2><p>Don't include Health information in support requests unless you intend to share it.</p>`, '/support/', 'Get help with Huck.'));
 pages.set('/404.html', simple('Page not found', '<p>That page does not exist. <a href="/">Back to Huck</a>.</p>', '/404.html', 'Page not found.').replace('<meta name="description"', '<meta name="robots" content="noindex"><meta name="description"'));
