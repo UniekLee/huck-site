@@ -27,6 +27,28 @@
     "bullets": ["Duration, distance, active energy, heart rate", "Optional: needs Apple Watch and Health permission", "Huck works without it if you'd rather skip"],
     "media": [{ "img": "watch-workout", "type": "watch", "alt": "Huck workout screen on Apple Watch" }]
   },
+  "watchhome": {
+    "kicker": "Apple Watch home",
+    "title": "Start a game. See how the last ones went.",
+    "body": "Your teams and one big Start game button sit up top. Below them are your latest results, with a green score for a win and each team's badge and name, plus a link to see every past game.",
+    "bullets": [
+      "Teams and Start game in one tap",
+      "Latest games at a glance, wins in green",
+      "See all past games from your wrist"
+    ],
+    "media": [
+      {
+        "img": "watch-home",
+        "type": "watch",
+        "alt": "Huck home screen on Apple Watch with the teams and a Start game button"
+      },
+      {
+        "img": "watch-past-games",
+        "type": "watch",
+        "alt": "Past games list on Apple Watch showing each team's score"
+      }
+    ]
+  },
   "teams": {
     "kicker": "Teams",
     "title": "Your teams, ready to play.",
@@ -40,5 +62,12 @@
     "body": "Every game ends with a summary you can look back on, and a result card to share with the team.",
     "bullets": ["Final score and game history", "Shareable square post or banner", "History stays available, always"],
     "media": [{ "img": "phone-summary", "type": "phone", "alt": "Huck game summary with final score and share options" }]
+  },
+  "editteams": {
+    "kicker": "Edit after the game",
+    "title": "Fix it after the whistle.",
+    "body": "Typed a team name wrong, or picked the wrong colours? Edit both on a finished game. The score and timeline stay as recorded, and the images you share use the new names.",
+    "bullets": ["Change names and colours any time", "Score and timeline stay as recorded", "Share images use the new names"],
+    "media": [{ "img": "phone-edit-teams", "type": "phone", "alt": "Edit teams sheet on a finished game in Huck" }]
   }
 }

@@ -16,7 +16,7 @@
         { "img": "watch-goal-assist", "type": "watch", "alt": "Goal and Assist buttons on Apple Watch" }
       ]
     },
-    "features": ["score", "mixed", "stats", "workout", "teams", "results"],
+    "features": ["score", "watchhome", "mixed", "stats", "workout", "teams", "editteams", "results"],
     "faq": [],
     "finalTitle": "Next game, keep more than the score.",
     "finalSub": "Your first 3 games are free, with every feature included."
@@ -97,6 +97,33 @@
       { "q": "Where do I see my stats afterwards?", "a": "In the game summary and your saved game history." }
     ],
     "finalTitle": "Remember what you did out there.",
+    "finalSub": "Your first 3 games are free, with every feature included."
+  },
+  {
+    "slug": "apple-watch-score-tracker",
+    "campaign": "hucksite_watchscore_v1",
+    "title": "Huck – Ultimate Score Tracker for Apple Watch & iPhone",
+    "description": "Looking for an Ultimate score tracker for Apple Watch? Huck keeps score from your wrist, records your workout and tracks mixed sets, goals and assists. Try 3 games free.",
+    "nav": "Apple Watch scorekeeper",
+    "hero": {
+      "eyebrow": "Ultimate score tracker",
+      "line1": "Keep Ultimate score",
+      "line2": "on your wrist.",
+      "sub": "Huck is an Ultimate scoreboard for Apple Watch and iPhone. Tap to add a point, follow the score and the next mixed set, and keep your goals, assists and workout with the game.",
+      "media": [
+        { "img": "watch-score", "type": "watch", "alt": "Huck Ultimate scoreboard on Apple Watch" },
+        { "img": "phone-summary", "type": "phone", "alt": "Huck game summary on iPhone" }
+      ]
+    },
+    "features": ["score", "watchhome", "mixed", "stats", "workout", "teams", "editteams", "results"],
+    "faq": [
+      { "q": "Can I keep Ultimate score on my Apple Watch?", "a": "Yes. Add a point to either team with a tap on Apple Watch. The score also appears on iPhone." },
+      { "q": "Do I need my phone with me to score a game?", "a": "No. Huck keeps score on Apple Watch on its own, and your Watch and iPhone stay in sync without needing an internet connection." },
+      { "q": "Does it track mixed sets like ABBA or OWWO/WOOW?", "a": "Yes. Pick your rotation before you start and Huck advances the active set after every point." },
+      { "q": "Can it record my workout while I keep score?", "a": "Yes, on Apple Watch with Health permission. Huck records the workout alongside the game, and works without it if you prefer." },
+      { "q": "Is it only for Ultimate?", "a": "Huck is built for Ultimate: the scoreboard, mixed sets, goals and assists are designed around how the game is played." }
+    ],
+    "finalTitle": "Score the next game from your wrist.",
     "finalSub": "Your first 3 games are free, with every feature included."
   }
 ]
